@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta charset="utf8">
 <title>Test widget</title>
 </head>
 <body>
@@ -44,7 +45,7 @@
         f = function () { n.parentNode.insertBefore(s, n); };
     s.type = "text/javascript";
     s.async = true;
-    s.src = (d.location.protocol == "http:" ? "http:" : "https:") + "//marschroute.ru/widgets/delivery/js/widget.js";
+    s.src = "https://marschroute.ru/widgets/delivery/js/widget.js";
 
     if (w.opera == "[object Opera]") {
         d.addEventListener("DOMContentLoaded", f);
