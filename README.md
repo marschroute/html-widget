@@ -14,6 +14,7 @@
         try {
             w.marschrouteWidget = w.marschrouteWidget || new Widget({
             public_key: 'a1s23d45fg67hj89kl', // Публичный ключ клиента !!! Необходимо получить у менеджера Маршрута (требуется указать сайты, с которых будет доступ по данному ключу)
+            yandex_maps_key: '7762a51b-edd1-4182-b401-9cfa84ca1901', // API-ключ для Яндекс.Карт
             target_id: 'test' // ID элемента куда будет вставлен виджет            
             });
 
@@ -45,6 +46,7 @@
 
 Полный список возможных параметров при инициализации следующий: 
 * __public_key__ - Публичный ключ клиента (обязательный параметр);
+* __yandex_maps_key__ - API-ключ для Яндекс.Карт;
 * __target_id__ - ID элемента на странице для размещения виджета (обязательный параметр);
 * __width__ - Ширина виджета (по умолчанию 1024);
 * __height__ - Высота виджета (по умолчанию 602);
@@ -78,6 +80,7 @@ w.marschrouteWidget = w.marschrouteWidget || new Widget({options});
 ```javascript 
 w.marschrouteWidget = w.marschrouteWidget || new Widget({
     public_key: 'a1s23d45fg67hj89kl',
+    yandex_maps_key: '7762a51b-edd1-4182-b401-9cfa84ca1901', 
     target_id: 'test',
     onSubmit: function (delivery, widget) {
         // что-нибудь делаем
@@ -153,6 +156,7 @@ schedule: "пн-пт 10-20, сб-вс 10-18" // График работы (дл�
 ```javascript 
 w.marschrouteWidget = new Widget({
     public_key: 'a1s23d45fg67hj89kl',
+    yandex_maps_key: '7762a51b-edd1-4182-b401-9cfa84ca1901', 
     target_id: 'test',
     filter: function (delivery_item) {
         delivery_item.delivery_cost = delivery_item.delivery_cost * 1.1; // + 10%
@@ -200,6 +204,7 @@ w.marschrouteWidget = new Widget({
 $(function() {
     var widget = new Widget({
         public_key: 'a1s23d45fg67hj89kl',
+        yandex_maps_key: '7762a51b-edd1-4182-b401-9cfa84ca1901', 
         target_id: 'test',
         onSubmit: function (delivery, widget) {
             widget.destroy();
